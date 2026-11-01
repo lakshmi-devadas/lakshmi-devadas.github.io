@@ -1,0 +1,151 @@
+<!doctype html>
+<!--
+  PORTFOLIO SITE for GitHub Pages
+  Put this file in a repo named lakshmi-devadas.github.io (root of main branch).
+  To add a project: copy one <article class="card"> block.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lakshmi Devadas · Power Systems Automation</title>
+<meta name="description" content="Python automation for power systems: load flow, protection, SCADA and substation configuration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --panel:#ffffff; --ink:#14181f; --muted:#5b6370; --line:#d9d4c7;
+    --accent:#d9480f; --live:#2b8a3e; --plan:#868e96; --grid:#e8e3d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0d1117; --panel:#151b23; --ink:#e6edf3; --muted:#9aa4b2; --line:#2a323d;
+      --accent:#ff922b; --live:#51cf66; --plan:#6b7480; --grid:#1a212b;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0d1117; --panel:#151b23; --ink:#e6edf3; --muted:#9aa4b2; --line:#2a323d;
+    --accent:#ff922b; --live:#51cf66; --plan:#6b7480; --grid:#1a212b;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.6 "IBM Plex Sans",system-ui,sans-serif;
+    background-image:
+      linear-gradient(var(--grid) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:32px 32px;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 16px}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+  a{color:var(--accent)}
+  header{padding:72px 0 40px}
+  .tag{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+  h1{font-size:clamp(34px,6vw,56px);line-height:1.05;margin:10px 0 16px;font-weight:700}
+  .lede{font-size:19px;color:var(--muted);max-width:620px;margin:0}
+  .bus{display:flex;align-items:center;gap:0;margin:32px 0 0;overflow:hidden}
+  .bus svg{width:100%;height:56px}
+  .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .btn{display:inline-block;padding:9px 16px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-size:14px;background:var(--panel)}
+  .btn:hover{background:var(--ink);color:var(--bg)}
+  section{padding:40px 0}
+  h2{font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 20px;color:var(--muted);display:flex;align-items:center;gap:12px}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+  .card{background:var(--panel);border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;gap:10px}
+  .card h3{margin:0;font-size:18px}
+  .card p{margin:0;color:var(--muted);font-size:15px;flex:1}
+  .status{font-size:12px;display:inline-flex;align-items:center;gap:6px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--plan)}
+  .live .dot{background:var(--live)} .wip .dot{background:var(--accent)}
+  .stack{display:flex;flex-wrap:wrap;gap:6px}
+  .stack span{font-size:12px;border:1px solid var(--line);padding:2px 8px}
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .skills div{background:var(--panel);border:1px solid var(--line);padding:16px}
+  .skills b{display:block;margin-bottom:6px}
+  .skills p{margin:0;color:var(--muted);font-size:14px}
+  .log li{margin:0 0 8px} .log{padding-left:18px;margin:0}
+  footer{padding:40px 0 56px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="tag mono">// power systems × python</div>
+  <h1>Lakshmi Devadas</h1>
+  <p class="lede">I automate the boring parts of power engineering — load flow studies, relay coordination, SCADA data and substation configuration — and document what I learn along the way.</p>
+
+  <div class="bus" aria-hidden="true">
+    <svg viewBox="0 0 900 56" preserveAspectRatio="none">
+      <line x1="0" y1="28" x2="900" y2="28" stroke="currentColor" stroke-width="4"/>
+      <g stroke="currentColor" stroke-width="2" fill="none">
+        <line x1="150" y1="28" x2="150" y2="8"/><rect x="142" y="0" width="16" height="10" fill="var(--accent)" stroke="none"/>
+        <line x1="380" y1="28" x2="380" y2="50"/><circle cx="380" cy="50" r="6"/>
+        <line x1="600" y1="28" x2="600" y2="8"/><circle cx="600" cy="8" r="6" fill="var(--bg)"/>
+        <line x1="800" y1="28" x2="800" y2="50"/><path d="M792 46 l8 8 l8 -8"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="links">
+    <a class="btn" href="https://github.com/lakshmi-devadas">GitHub</a>
+  </div>
+</header>
+
+<section id="projects">
+  <h2 class="mono">Projects</h2>
+  <div class="grid">
+    <article class="card">
+      <span class="status live mono"><i class="dot"></i>Live</span>
+      <h3>grid-loadflow-lab</h3>
+      <p>Load flow and N-1 contingency studies on IEEE 14/30-bus systems. Flags overloaded lines and voltage violations, exports an Excel report.</p>
+      <div class="stack mono"><span>pandapower</span><span>pandas</span><span>openpyxl</span></div>
+      <a href="https://github.com/lakshmi-devadas/grid-loadflow-lab">View code →</a>
+    </article>
+    <article class="card">
+      <span class="status mono"><i class="dot"></i>Planned</span>
+      <h3>relay-coordination-calc</h3>
+      <p>IEC 60255 IDMT curve calculator. Plots time-current curves for upstream/downstream relays and checks coordination time interval automatically.</p>
+      <div class="stack mono"><span>NumPy</span><span>matplotlib</span><span>Streamlit</span></div>
+      <a href="https://github.com/lakshmi-devadas/relay-coordination-calc">View code →</a>
+    </article>
+    <article class="card">
+      <span class="status mono"><i class="dot"></i>Planned</span>
+      <h3>scl-parser</h3>
+      <p>Parses IEC 61850 SCD/ICD files into an IED, logical node and GOOSE dataset inventory — the spreadsheet engineers usually build by hand.</p>
+      <div class="stack mono"><span>lxml</span><span>pandas</span></div>
+      <a href="https://github.com/lakshmi-devadas/scl-parser">View code →</a>
+    </article>
+    <article class="card">
+      <span class="status mono"><i class="dot"></i>Planned</span>
+      <h3>modbus-sim-logger</h3>
+      <p>A simulated Modbus TCP energy meter plus a Python poller that logs V, I, kW and PF to CSV with basic alarm thresholds.</p>
+      <div class="stack mono"><span>pymodbus</span><span>asyncio</span></div>
+      <a href="https://github.com/lakshmi-devadas/modbus-sim-logger">View code →</a>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="mono">What I work with</h2>
+  <div class="skills">
+    <div><b>Analysis</b><p>Load flow, short-circuit, contingency, relay coordination</p></div>
+    <div><b>Protocols &amp; standards</b><p>IEC 61850, Modbus TCP, IEC 60255</p></div>
+    <div><b>Python</b><p>pandas, NumPy, pandapower, pymodbus, lxml, Streamlit</p></div>
+    <div><b>Workflow</b><p>Git, GitHub Actions, Claude for code review &amp; docs</p></div>
+  </div>
+</section>
+
+<section id="log">
+  <h2 class="mono">Learning log</h2>
+  <ul class="log">
+    <li><span class="mono">2026-11-01</span> — Set up GitHub profile, portfolio and README automation</li>
+  </ul>
+  <p style="margin-top:12px"><a href="https://github.com/lakshmi-devadas/lakshmi-devadas/blob/main/LEARNING_LOG.md">Full log on GitHub →</a></p>
+</section>
+
+<footer class="mono">© 2026 Lakshmi Devadas · Built with plain HTML, hosted on GitHub Pages</footer>
+</div>
+</body>
+</html>
